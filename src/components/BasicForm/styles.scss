@@ -1,0 +1,76 @@
+@use "../../assets/styles/global.scss";
+
+.basic-form-container-background {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+.night-background {
+  @extend .basic-form-container-background;
+  background-image: url("../../../images/night-desktop.jpg");
+}
+
+.day-background {
+  @extend .basic-form-container-background;
+  background-image: url("../../../images/sunset-desktop.jpg");
+}
+
+.basic-form-container {
+  height: 90%;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.basic-form-title {
+  color: white;
+  font-size: 40px;
+  margin: 0 !important;
+}
+
+.basic-form-gradient {
+  background: linear-gradient(
+    to bottom,
+    rgb(200, 200, 200),
+    rgb(250, 250, 250)
+  );
+
+  opacity: 0.7 !important;
+}
+
+.basic-form {
+  gap: 15px;
+  width: 80%;
+  margin: 30px;
+  display: flex;
+  max-width: 600px;
+  min-width: 280px;
+  padding: 40px 20px;
+  border-radius: 15px;
+  align-items: center;
+  flex-direction: column;
+
+  label {
+    color: black;
+    font-weight: bold;
+  }
+}
+
+.basic-form:hover {
+  opacity: 0.9 !important;
+  transform: scale(1.02);
+}
+
+.basic-form-footer {
+  @extend .flex-box;
+  margin-top: 20px;
+  gap: 10px;
+
+  button:hover {
+    transform: scale(0.9);
+  }
+}
